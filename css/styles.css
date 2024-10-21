@@ -1,0 +1,280 @@
+/*** Importing fonts ***
+### Obtained from Google Fonts, at:
+### https://fonts.google.com
+
+#################################*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+/*** CSS Reset ***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-container {
+    position: relative;
+    width: 414px;
+    height: 1026px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+/*** Topbar styles ***/
+.topbar-container {
+    background-color: #CF2B2B;
+    height: 92px;
+    width: 412px;
+    position: fixed;
+    padding-left: 21px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/*** Principal section styles ***/
+h1 {
+    font-family: 'Righteous', Sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 54.63px;
+}
+
+p {
+    font-family: 'Roboto', Sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.09px;
+}
+
+/*** PRINCIPAL ***/
+.food {
+    top: 123px;
+    height: 216px;
+}
+
+.food-cards {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+}
+
+.food-card {
+    display: flex;
+    flex-direction: column;
+    width: 172px;
+    height: 100%;
+    margin-left: 10px;
+}
+
+#pao-com-ovo-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/foods/pao-com-ovo.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#cuscuz-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/foods/cuscuz.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#beiju-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/foods/beiju.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#espetinho-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/foods/espetinho.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.drink {
+    height: 216px;
+    background-color:cadetblue;
+    top: 60px;
+}
+
+.drink-cards {
+    display: flex;
+    height: 100%;
+    position: absolute;
+}
+
+.drink-card {
+    margin-left: 10px;
+    width: 172px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    position: relative;
+}
+
+.dessert {
+    height: 216px;
+}
+
+.dessert-cards {
+    display: flex;
+    height: 100%;
+    margin-top: 47px;
+    position: absolute;
+}
+
+.dessert-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 172px;
+    margin-left: 10px;
+}
+
+section {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 120px;
+    overflow-Y: hidden;
+    overflow-X: scroll;
+}
+
+.cards {
+    height: calc(100% - 42px);
+}
+
+.card {
+    font-family: 'Roboto';
+    justify-content: space-evenly;
+    padding-left: 15px;
+}
+
+.card span:nth-child(2) {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.75px;
+}
+
+.card span:nth-child(3),
+.card span:nth-child(4) {
+    font-size: 15px;
+    font-weight: 300;
+    color: #A6A6A6;
+}
+
+.card span:nth-child(5) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+}
+
+.image {
+    align-self: center;
+    margin-right: 15px;
+}
+
+.title {
+    position: sticky;
+    width: 100%;
+    font-size: 25px;
+    left: 10px;
+    font-family: 'Righteous';
+    font-size: 26px;
+    font-weight: 400;
+}
+
+#jao-laranja-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/drinks/jao-laranja.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#suco-beterraba-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/drinks/suco-beterraba.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#detox-berinjela-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/drinks/detox-berinjela.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#copo-agua-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/drinks/copo-agua.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#banana-amassada-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/desserts/banana-amassada.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#vitamina-abacate-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/desserts/vitamina-abacate.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#mamao-com-acucar-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/desserts/mamao-com-acucar.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#biscoito-com-nutela-image {
+    width: 144px;
+    height: 87px;
+    background: url("../img/desserts/biscoito-com-nutela.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*** Bottom bar - Check-out ***/
+.bottombar-container {
+    height: 92px;
+    width: 414px;
+    background-color: rgb(6, 99, 29);
+    position: fixed;
+    bottom: 0;
+}
