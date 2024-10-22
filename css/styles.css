@@ -150,7 +150,6 @@ section {
     position: relative;
     flex-direction: column;
     top: 130px;
-    //padding-top: 30px;
     margin-top: 30px;
     height: 300px;
     overflow-Y: hidden;
@@ -158,7 +157,7 @@ section {
 }
 
 ::-webkit-scrollbar {
-	//width: 0;
+
 }
 
 .cards {
