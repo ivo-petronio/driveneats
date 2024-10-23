@@ -128,7 +128,7 @@ cancelBtn.addEventListener("mouseout", () => {
 
 
 
-function cancelOrder(cancelBtn) {
+function cancelOrder() {
 
 	const confirm_screen = document.querySelector('.order-confirmation-screen');
 	confirm_screen.style.display = "none";
