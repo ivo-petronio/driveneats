@@ -6,7 +6,10 @@
  Global Variables
 *****************/
 
+
 var orderItems = new Object();
+
+
 
 
 
@@ -19,7 +22,7 @@ function selectFood(food) {
 	justSelected(document.querySelector('.food .selected'));
 	food.classList.add('selected');
 	orderItems.food = {
-				rango: food.children[1].innerHTML,
+				name: food.children[1].innerHTML,
 				price: food.children[4].innerHTML
 			  }
 }
@@ -28,7 +31,7 @@ function selectDrink(drink) {
 	justSelected(document.querySelector('.drink .selected'));
 	drink.classList.add('selected');
 	orderItems.drink = {
-				drink: drink.children[1].innerHTML,
+				name: drink.children[1].innerHTML,
 				price: drink.children[4].innerHTML
 			   }
 }
@@ -37,7 +40,7 @@ function selectDessert(dessert) {
 	justSelected(document.querySelector('.dessert .selected'));
 	dessert.classList.add('selected');
 	orderItems.dessert = {
-				dessert: dessert.children[1].innerHTML,
+				name: dessert.children[1].innerHTML,
 				price: dessert.children[4].innerHTML
 			     }
 }
@@ -55,6 +58,7 @@ function justSelected(selected) {
 		selected.classList.remove('selected');
 	}
 }
+
 
 
 
@@ -85,8 +89,19 @@ const timer = setInterval(() => {
 
 function checkout() {
 	const confirm_screen = document.querySelector('.order-confirmation-screen');
-	const app_container = document.querySelector('.app-container');
 	confirm_screen.style.display = "flex";
+	
+	let foodPrice = parseFloat(orderItems.food.price);
+	let drinkPrice = parseFloat(orderItems.drink.price);
+	let dessertPrice = parseFloat(orderItems.dessert.price);
+	let total = foodPrice + drinkPrice + dessertPrice;
+
+	console.log(typeof(total), total);
+
+	confirm_screen.children[0].children[1].innerHTML = `${orderItems.food.name}: R$${orderItems.food.price}`;
+	confirm_screen.children[0].children[2].innerHTML = `${orderItems.drink.name}: R$${orderItems.drink.price}`;
+	confirm_screen.children[0].children[3].innerHTML = `${orderItems.dessert.name}: R$${orderItems.dessert.price}`;
+	confirm_screen.children[0].children[4].innerHTML = `total: R$${total}`;
 }
 
 
