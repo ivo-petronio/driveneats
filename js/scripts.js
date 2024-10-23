@@ -87,7 +87,7 @@ function checkout() {
 	const confirm_screen = document.querySelector('.order-confirmation-screen');
 	const app_container = document.querySelector('.app-container');
 	app_container.style.backdropFilter = "darkness(10)";
-	confirm_screen.style.display = "block";
+	confirm_screen.style.display = "flex";
 }
 
 
