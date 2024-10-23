@@ -302,7 +302,7 @@ section {
 }
 
 section .selected {
-    border: 3px solid lime;
+    border: 3px solid #32B72F;
 }
 
 .card span:nth-child(2) {
