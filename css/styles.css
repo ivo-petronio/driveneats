@@ -7,9 +7,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-#media screen and (max-width) {
-	.app-container {
-		width: 100%;
+/*** RESPONSIVITY - SCREEN HEIGHT ***/
+@media screen and (min-height: 900px) {
+	div.app-container {
+		height: 135vh;
+	}
+}
+
+@media screen and (max-height: 900px) and (min-height: 800px) {
+	div.app-container {
+		height: 145vh;
+	}
+}
+
+@media screen and (max-height: 800px) and (min-height: 700px) {
+	div.app-container {
+		height: 170vh;
+	}
+}
+
+/*** RESPONSIVITY - SCREEN WIDTH ***/
+@media screen and (min-width: 740px) {
+	div.app-container {
+		width: 100vw;
+	}
+
+	div.topbar-container {
+		width: 100vw;
+	}
+
+	div.bottombar-container {
+		width: 100vw;
+	}
+
+	div.bottombar-container .orderBtn {
+		width: 38%;
+	}
+
+	section .title {
+		display: flex;
+		justify-content: center;
+		width: 100vw;
+	}
+	
+	div.cards {
+		display: flex;
+		justify-content: center;
+	}
+
+	::-webkit-scrollbar {
+		width: 0;
+	}
+}
+
+@media screen and (min-width: 415px) and (max-width: 740px) {
+	div.app-container {
+		width: 100vw;
+	}
+
+	div.topbar-container {
+		width: 100vw;
+	}
+
+	div.bottombar-container {
+		width: 100vw;
+	}
+
+	div.bottombar-container .orderBtn {
+		width: 85%;
+	}
+
+	section .title {
+		display: flex;
+		justify-content: center;
+		width: 100vw;
+	}
+	
+	div.cards {
+		display: flex;
+	}
+
+	::-webkit-scrollbar {
+		width: 0;
+	}
+}
+
+@media screen and (max-width: 414px) and (min-width: 255px) {
+
+	div.topbar-container {
+		width: 100vw;
+	}
+
+	div.app-container {
+		width: 100vw;
+	}
+
+	div.bottombar-container {
+		width: 100vw;
+	}
+
+}
+
+@media screen and (max-width: 255px) {
+	div.app-container {
+		width: 100vw;
+	}
+
+	div.topbar-container h1 {
+		font-size: 12vmin;
+	}
+
+	div.topbar-container p {
+		font-size: 7vmin;
+	}
+
+	section .title {
+		font-size: 8vmin;
+	}
+
+	div.card {
+		height: 80%;
+	}
+
+	div.bottombar-container {
+		width: 100vw;
 	}
 }
 
@@ -21,24 +142,24 @@
     box-sizing: border-box;
 }
 
-body {
-	height: 100vh;
-}
-
 .app-container {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 414px;
-    height: 190vh;
+    height: calc(100vh + 600px);
     margin: 0 auto;
     background-color: #EEEEEE;
 }
 
 /*** Topbar styles ***/
 .topbar-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
     background-color: #CF2B2B;
     height: 92px;
     width: 414px;
-    position: fixed;
     top: 0;
     margin-top: 0;
     padding-left: 21px;
@@ -73,7 +194,7 @@ p {
 .food-cards {
     display: flex;
     height: 100%;
-    display: absolute;
+    position: absolute;
 }
 
 .food-card {
@@ -150,6 +271,7 @@ section {
     position: relative;
     flex-direction: column;
     top: 130px;
+    //padding-top: 30px;
     margin-top: 30px;
     height: 300px;
     overflow-Y: hidden;
@@ -157,7 +279,7 @@ section {
 }
 
 ::-webkit-scrollbar {
-
+	//width: 0;
 }
 
 .cards {
@@ -300,10 +422,39 @@ section .selected {
 }
 
 .orderBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     height: 70%;
     border-radius: 40px;
     border: none;
     background-color: #CBCBCB;
     box-shadow: 0px 1px 3px #000;
+}
+
+button.complete {
+	background-color: green;
+}
+
+
+
+
+
+/*****************************************
+	Confirmation Order Screen
+*****************************************/
+
+.order-confirmation-screen {
+	position: absolute;
+	top: 100vh;
+	left: 50vw;
+	width: 65vw;
+	transform: translate(-50%, -50%);
+	height: 65vw;
+	margin: auto;
+	background-color: green;
+	display: none;
+	z-index: 2;
 }

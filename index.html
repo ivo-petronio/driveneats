@@ -4,6 +4,7 @@
 <head>
     <title>Driven Eats</title>
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -112,8 +113,11 @@
             </div>
         </section>
         <div class="bottombar-container">
-            <button class="orderBtn incomplete" onclick="checkout(this)"><p>Selecione os 3 itens</p><p>Para fechar o pedido</p></button>
+            <button class="orderBtn" onclick="checkout()"><p>Selecione os 3 itens</p><p>Para fechar o pedido</p></button>
         </div>
+
+	<!-- ORDER CONFIRMATION SCREEN (initialy display = none) -->
+	<div class="order-confirmation-screen"></div>
     </div>
     <script src="js/scripts.js"></script>
 </body>
