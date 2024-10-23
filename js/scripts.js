@@ -110,6 +110,35 @@ function checkout() {
 
 
 
+/********************************************************************
+ THIS FUNCTION CANCELS THE ORDER AND CLOSES THE CONFIRMATION SCREEN
+********************************************************************/
+
+const cancelBtn = document.querySelector('.cancelOrderBtn');
+cancelBtn.style.cursor = "pointer";
+
+cancelBtn.addEventListener("mouseover", () => {
+	cancelBtn.style.filter = "drop-shadow( 3px 3px 5px #000)";
+})
+
+cancelBtn.addEventListener("mouseout", () => {
+	cancelBtn.style.filter = "none";
+	cancelBtn.style.color = "#fff";
+})
+
+
+
+function cancelOrder(cancelBtn) {
+
+	const confirm_screen = document.querySelector('.order-confirmation-screen');
+	confirm_screen.style.display = "none";
+}
+
+
+
+
+
+
 
 
 
