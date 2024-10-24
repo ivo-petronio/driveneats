@@ -112,8 +112,6 @@ function checkout() {
 
 		const url = encodeURIComponent(message);
 
-		alert(url);
-
 		sendOrderBtn.setAttribute("href", `https://wa.me/5561981033400?text=${url}`);
 	});
 }
