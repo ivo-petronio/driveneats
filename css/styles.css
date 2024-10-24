@@ -290,6 +290,7 @@ section {
 .cards {
     height: 100%;
     position: relative;
+    border-radius: 9px;
 }
 
 .card {
@@ -298,8 +299,9 @@ section {
     padding-left: 15px;
     background-color: #FFFFFF;
     border: 3px solid white;
-    border-radius: 9px;
     height: 216px;
+    border-radius: 9px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 section .selected {
@@ -460,6 +462,7 @@ button.complete {
 	width: 100%;
 	height: 100%;
 	z-index: 2;
+	transition: display 1s;
 }
 
 .order-confirmation-screen:before {
@@ -471,7 +474,7 @@ button.complete {
 	width: 100%;
 	background-color: #eee;
 	opacity: .9;
-	transition: all 1s;
+	transition: display 1s;
 }
 
 #order-description-screen {
@@ -488,6 +491,7 @@ button.complete {
 	font-weight: 400;
 	color: #fff;
 	border-radius: 9px;
+    	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .order-confirmation-screen .order-title,
@@ -504,7 +508,7 @@ button.complete {
 	margin-top: 20px;
 }
 
-.order-confirmation-screen .confirmBtn {
+.order-confirmation-screen .sendOrderBtn {
 	color: #50D074;
 	background-color: #fff;
 	font-weight: 700;
@@ -512,7 +516,8 @@ button.complete {
 	padding: 10px 30px;
 	border-radius: 40px;
 	text-align: center;
-
+	text-decoration: none;
+	cursor: pointer;
 	margin-bottom: 0;
 }
 
@@ -529,4 +534,42 @@ button.complete {
 	font-size: 20px;
 	font-weight: 700;
 	color: #fff;
+	transition: all .7s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
