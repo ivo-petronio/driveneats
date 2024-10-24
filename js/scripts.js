@@ -6,10 +6,7 @@
  Global Variables
 *****************/
 
-
 var orderItems = new Object();
-
-
 
 
 
@@ -61,7 +58,6 @@ function justSelected(selected) {
 
 
 
-
 /******************************************************************
  This function verifies if all the options have just been selected
                 and ability the order buttom
@@ -94,25 +90,41 @@ function checkout() {
 	let foodPrice = parseFloat(orderItems.food.price);
 	let drinkPrice = parseFloat(orderItems.drink.price);
 	let dessertPrice = parseFloat(orderItems.dessert.price);
-	let total = foodPrice + drinkPrice + dessertPrice;
-
-	console.log(typeof(total), total);
+	let total = (foodPrice + drinkPrice + dessertPrice);
 
 	confirm_screen.children[0].children[1].innerHTML = `${orderItems.food.name}: R$${orderItems.food.price}`;
 	confirm_screen.children[0].children[2].innerHTML = `${orderItems.drink.name}: R$${orderItems.drink.price}`;
 	confirm_screen.children[0].children[3].innerHTML = `${orderItems.dessert.name}: R$${orderItems.dessert.price}`;
-	confirm_screen.children[0].children[4].innerHTML = `total: R$${total}`;
+	confirm_screen.children[0].children[4].innerHTML = `total: R$${total.toFixed(2)}`;
+
+
+	const sendOrderBtn = document.querySelector(".sendOrderBtn");
+
+	sendOrderBtn.addEventListener("mouseover", () => {
+
+		const message =
+
+`Olá, gostaria de fazer o pedido:\n
+- *Prato:* ${orderItems.food.name}\n
+- *Bebida:* ${orderItems.drink.name}\n
+- *Sobremesa:* ${orderItems.dessert.name}\n
+*Total:* R$ ${total.toFixed(2)}`;
+
+		const url = encodeURIComponent(message);
+
+		alert(url);
+
+		sendOrderBtn.setAttribute("href", `https://wa.me/5561981033400?text=${url}`);
+	});
 }
 
 
 
 
 
-
-
-/********************************************************************
- THIS FUNCTION CANCELS THE ORDER AND CLOSES THE CONFIRMATION SCREEN
-********************************************************************/
+/*******************************************************************
+  THIS FUNCTION CANCELS AND CLOSES THE ORDER CONFIRMATION SCREEN
+*******************************************************************/
 
 const cancelBtn = document.querySelector('.cancelOrderBtn');
 cancelBtn.style.cursor = "pointer";
@@ -128,7 +140,7 @@ cancelBtn.addEventListener("mouseout", () => {
 
 
 
-function cancelOrder() {
+function cancelOrder(cancelBtn) {
 
 	const confirm_screen = document.querySelector('.order-confirmation-screen');
 	confirm_screen.style.display = "none";
@@ -142,3 +154,12 @@ function cancelOrder() {
 
 
 
+
+/*******************************************************************
+     THIS FUNCTION SENDS THE ORDER TO THE COMPANY'S WHATSAPP
+*******************************************************************/
+
+
+function approveOrder() {
+	alert("Por gentileza, implemente o envio para o whatsapp da empresa");
+}
