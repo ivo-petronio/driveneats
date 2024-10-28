@@ -144,20 +144,3 @@ function cancelOrder(cancelBtn) {
 	confirm_screen.style.display = "none";
 }
 
-
-
-
-
-
-
-
-
-
-/*******************************************************************
-     THIS FUNCTION SENDS THE ORDER TO THE COMPANY'S WHATSAPP
-*******************************************************************/
-
-
-function approveOrder() {
-	alert("Por gentileza, implemente o envio para o whatsapp da empresa");
-}
