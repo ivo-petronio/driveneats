@@ -2,7 +2,7 @@
 
 <br>
 
-->  <a href="ivo-petronio.github.io/driveneats/"> Link 4 App </a> <-
+[LINK 4 APP](https://ivo-petronio.github.io/driveneats)
 
 <br />
 
